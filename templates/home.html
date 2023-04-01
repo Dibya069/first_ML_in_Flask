@@ -1,0 +1,18 @@
+<h2>Prediction of FWI</h2>
+
+<!-- Main query for receving query to the ML -->
+<form action = "{{ url_for("predict_FWI")}}" method = "POST">
+    <input type="text" name="Temperature" placeholder = "Temperature" required = "required"><br><br>
+    <input type="text" name="RH" placeholder = "RH" required = "required"><br><br>
+    <input type="text" name="Ws" placeholder = "Ws" required = "required"><br><br>
+    <input type="text" name="Rain" placeholder = "Rain" required = "required"><br><br>
+    <input type="text" name="FFMC" placeholder = "FFMC" required = "required"><br><br>
+    <input type="text" name="DMC" placeholder = "DMC" required = "required"><br><br>
+    <input type="text" name="ISI" placeholder = "ISI" required = "required"><br><br>
+    <input type="text" name="Classes" placeholder = "Classes" required = "required"><br><br>
+    <input type="text" name="Region" placeholder = "Region" required = "required"><br><br>
+
+    <button type = "submit" class = "btn btn-primery"> Predict </button>
+</form>
+
+<h2> The FWI prediction is : {{results}} </h2>
